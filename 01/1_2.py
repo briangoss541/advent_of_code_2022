@@ -16,13 +16,13 @@ test_string = """1000
 10000"""
 
 with open('input.txt') as in_file:
-    input_string = in_file.read()
+    input_string = in_file.readlines()
 
 elf_num = 0
 elf_dict = defaultdict(int)
-for line in input_string.split('\n'):
+for line in input_string:
 
-    if line == '':
+    if line == '\n':
         elf_num += 1
     else:
         calories = int(line)
